@@ -1,12 +1,12 @@
 # DTO-FAQ-CMS
 DTO FAQ CMS
 
-git clone https://github.com/nurisakbar/DTO-FAQ-CMS.git
-1 - cd DTO-FAQ-CMS
-2 - cp .env.example .env
-3 - cd src && composer install
-4 - cp .env.example .env
-5 - docker-compose up
+1 - git clone https://github.com/nurisakbar/DTO-FAQ-CMS.git <br>
+2 - cd DTO-FAQ-CMS<br>
+3 - cp .env.example .env<br>
+4 - cd src && composer install<br>
+5 - cp .env.example .env<br>
+6 - docker-compose up<br>
 
 
 
