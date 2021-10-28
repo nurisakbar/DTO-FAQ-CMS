@@ -99,6 +99,7 @@ class FaqController extends Controller
     public function update(Request $request, $id)
     {
         $faq = Faq::findOrFail($id);
+        $request['slug'] = Str::slug($request->title, '-');
         $faq->update($request->all());
         \Session::flash('message', 'successfully updated FAQ');
         return redirect('admin/faq');

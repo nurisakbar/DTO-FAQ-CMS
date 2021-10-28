@@ -8,6 +8,7 @@ use App\Category;
 use Auth;
 use App\Http\Controllers\Controller;
 use Storage;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -67,6 +68,7 @@ class CategoryController extends Controller
             Storage::putFileAs('public', $request->file('icon'), $fileName);
             $data['icon'] = $fileName;
         }
+        $data['slug'] = Str::slug($request->category, '-');
         Category::create($data);
         \Session::flash('message', 'a new category has been added successfully');
         return redirect('admin/category');
@@ -112,6 +114,7 @@ class CategoryController extends Controller
             Storage::putFileAs('public', $request->file('icon'), $fileName);
             $data['icon'] = $fileName;
         }
+        $data['slug'] = Str::slug($request->category, '-');
         $category->update($data);
         \Session::flash('message', 'successfully updated category');
         return redirect('admin/category');
