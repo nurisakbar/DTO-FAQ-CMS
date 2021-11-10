@@ -11,7 +11,8 @@
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -72,7 +73,7 @@
             <div class="container text-md-start mt-5">
                 <div class="row mt-3">
                     <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-                        <img src="{{ asset('images/logokemkes.png')}}">
+                        <img src="{{ asset('images/DTO-logo-landscape.png')}}" width="200">
                         <p>
                             Jl. HR. Rasuna Said Blok X5 Kav. 4-9, Jakarta Selatan 12950 <br>
                             Telp: (021) 52907416-9<br>

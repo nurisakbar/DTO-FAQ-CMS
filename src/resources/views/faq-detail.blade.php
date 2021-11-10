@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <p>{{ link_to('/','Home')}} / {{ link_to('',$faq->category->category) }} / {{ $faq->title }}</p>
+            <p>{{ link_to('/','Home')}} / {{ link_to('category/'.$faq->category->slug,$faq->category->category) }} / {{ $faq->title }}</p>
             <h3> {{ $faq->title }}</h3>
             <p class="text-justify">{!! $faq->content!!}</p>
         </div>
