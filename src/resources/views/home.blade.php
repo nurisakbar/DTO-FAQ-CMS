@@ -19,7 +19,7 @@
         @foreach ($faqs as $faq)
         <a href="{{ URL::to('faq/'.$faq->slug)}}">
             <div class="col-md-6">
-                <div class="card" style="margin-bottom: 30px;font-weight:700">
+                <div class="card shadow" style="margin-bottom: 30px;font-weight:700">
                     <div class="card-body">
                         <p> 
                             <img src="{{asset('storage/'.$faq->category->icon)}}" class="icon-category-small">

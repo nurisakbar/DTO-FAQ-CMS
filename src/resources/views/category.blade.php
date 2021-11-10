@@ -8,7 +8,7 @@
     <div class="row">
         @foreach ($category->faq as $faq)
         <div class="col-md-6">
-            <div class="card" style="margin-bottom: 30px">
+            <div class="card shadow" style="margin-bottom: 30px">
                 <div class="card-body">
                     <p style="font-weight:bold">
                         {{ link_to('faq/'.$faq->slug,$faq->title,['class' => 'stretched-link']) }}
