@@ -30,8 +30,10 @@ class PageController extends Controller
 
     public function search(Request $request)
     {
-        $data['faqs']       = Faq::where('title', 'like', "%".$request->keyword."%");
+        $faqs = Faq::with('category')->where('title', 'like', "%".$request->keyword."%");
+        $data['faqs']       = $faqs->paginate(10);
         $data['keyword']    = $request->keyword;
+        $data['faqs_count_result'] = $faqs->count();
         return view('search', $data);
     }
 

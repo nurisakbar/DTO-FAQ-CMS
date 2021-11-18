@@ -28,31 +28,26 @@
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('images/logokemkes.png')}}">
             </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Beranda <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Program</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Karir</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">FAQ</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">FAQ</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-      </nav>
+    </nav>
 
 
 
@@ -89,9 +84,9 @@
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">Ikuti Kami</h6>
                         <p>
-                            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                            <a style="text-decoration: none;color:white" href="https://www.facebook.com/KementerianKesehatanRI"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            <a style="text-decoration: none;color:white" href="https://www.instagram.com/kemenkes_ri/?hl=id"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                                <a style="text-decoration: none;color:white" href="https://twitter.com/KemenkesRI"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
                         </p>
                     </div>
                 </div>
