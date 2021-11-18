@@ -18,6 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('css/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    @stack('css')
 </head>
 
 

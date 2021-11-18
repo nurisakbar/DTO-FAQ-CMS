@@ -18,6 +18,6 @@ Route::get('/', 'PageController@home');
 Route::get('faq/{slug}', 'PageController@faqDetail');
 Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
-Auth::routes();
+Auth::routes(['register'=>false]);
 Route::resource('admin/faq', 'Admin\FaqController');
 Route::resource('admin/category', 'Admin\CategoryController');

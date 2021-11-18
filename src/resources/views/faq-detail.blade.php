@@ -6,7 +6,7 @@
         <div class="col-md-9">
             <p>{{ link_to('/','Home')}} / {{ link_to('category/'.$faq->category->slug,$faq->category->category) }} / {{ $faq->title }}</p>
             <h3> {{ $faq->title }}</h3>
-            <p class="text-justify">{!! $faq->content!!}</p>
+            <p class="text-justify" id="content">{!! $faq->content!!}</p>
         </div>
         <div class="col-md-3">
             <h4>Related FAQ</h4>
@@ -17,3 +17,29 @@
     </div>
 </div>
 @endsection
+
+@push('css')
+<style>
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+</style>
+
+@endpush
