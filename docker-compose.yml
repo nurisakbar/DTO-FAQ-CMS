@@ -20,29 +20,29 @@ services:
     depends_on:
       - php
       # - redis
-      - mysql
+      # - mysql
       # - mailhog
     networks:
       - laravel
 
-  mysql:
-    image: mariadb:10.6
-    container_name: mysql
-    restart: unless-stopped
-    tty: true
-    ports:
-      - 3306:3306
-    environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: secret
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    volumes:
-      - .mysql-volume:/var/lib/mysql
-    networks:
-      - laravel
+  # mysql:
+  #   image: mariadb:10.6
+  #   container_name: mysql
+  #   restart: unless-stopped
+  #   tty: true
+  #   ports:
+  #     - 3306:3306
+  #   environment:
+  #     MYSQL_DATABASE: homestead
+  #     MYSQL_USER: homestead
+  #     MYSQL_PASSWORD: secret
+  #     MYSQL_ROOT_PASSWORD: secret
+  #     SERVICE_TAGS: dev
+  #     SERVICE_NAME: mysql
+  #   volumes:
+  #     - .mysql-volume:/var/lib/mysql
+  #   networks:
+  #     - laravel
 
   php:
     build:
@@ -66,53 +66,53 @@ services:
   #   networks:
   #     - laravel
 
-  composer:
-    build:
-      context: .
-      dockerfile: composer.dockerfile
-      args:
-        - PHPUSER=${PHPUSER:-www-data}
-        - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: composer
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    depends_on:
-      - php
-    user: ${PHPUSER:-www-data}
-    entrypoint: ['composer', '--ignore-platform-reqs']
-    networks:
-      - laravel
+  # composer:
+  #   build:
+  #     context: .
+  #     dockerfile: composer.dockerfile
+  #     args:
+  #       - PHPUSER=${PHPUSER:-www-data}
+  #       - PHPGROUP=${PHPGROUP:-www-data}
+  #   container_name: composer
+  #   volumes:
+  #     - ./src:/var/www/html
+  #   working_dir: /var/www/html
+  #   depends_on:
+  #     - php
+  #   user: ${PHPUSER:-www-data}
+  #   entrypoint: ['composer', '--ignore-platform-reqs']
+  #   networks:
+  #     - laravel
 
-  npm:
-    image: node:13.7
-    container_name: npm
-    volumes:
-      - ./src:/var/www/html
-    ports:
-      - 3000:3000
-      - 3001:3001
-    working_dir: /var/www/html
-    entrypoint: ['npm']
-    networks:
-      - laravel
+  # npm:
+  #   image: node:13.7
+  #   container_name: npm
+  #   volumes:
+  #     - ./src:/var/www/html
+  #   ports:
+  #     - 3000:3000
+  #     - 3001:3001
+  #   working_dir: /var/www/html
+  #   entrypoint: ['npm']
+  #   networks:
+  #     - laravel
 
-  artisan:
-    build:
-      context: .
-      dockerfile: php.dockerfile
-      args:
-        - PHPUSER=${PHPUSER:-www-data}
-        - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: artisan
-    volumes:
-      - ./src:/var/www/html:delegated
-    depends_on:
-      - mysql
-    working_dir: /var/www/html
-    entrypoint: ['php', '/var/www/html/artisan']
-    networks:
-      - laravel
+  # artisan:
+  #   build:
+  #     context: .
+  #     dockerfile: php.dockerfile
+  #     args:
+  #       - PHPUSER=${PHPUSER:-www-data}
+  #       - PHPGROUP=${PHPGROUP:-www-data}
+  #   container_name: artisan
+  #   volumes:
+  #     - ./src:/var/www/html:delegated
+  #   depends_on:
+  #     - mysql
+  #   working_dir: /var/www/html
+  #   entrypoint: ['php', '/var/www/html/artisan']
+  #   networks:
+  #     - laravel
 
   # mailhog:
   #   image: mailhog/mailhog:latest
